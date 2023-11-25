@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your website description">
+    <title>JQuery Crud with Local Storage</title>
+    <style>
+        @media (min-width: 576px) {
+            .jumbotron {
+                padding: 1rem 2rem;
+                background-color: greenyellow;
+            }
+        }
+
+        .errdiv {
+            color: red;
+            font-weight: bold;
+        }
+
+        label {
+            margin-bottom: 0;
+        }
+
+        .tdaction {
+            width: 15%;
+        }
+
+        .tdSr {
+            width: 7%;
+        }
+
+        .jumbotron {
+            margin-bottom: 0.5rem;
+        }
+
+        strong {
+            font-size: 24px !important;
+        }
+
+        input.largerCheckbox {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron text-center bg-success text-white">
+            <h2>jQuery Crud With Local Storage</h2>
+            <h4> Insert, Update & Delete Operation</h4>
+        </div>
+        <div class="form-row">
+            <div class="col-md-3">
+                <label>Name <span class="errdiv"> *</span></label>
+                <input id="txtName" type="text" class="form-control txt txtName" placeholder="Enter Name" required>
+                <input id="txtId" type="hidden" class="form-control txt">
+            </div>
+            <div class="col-md-3 col-sm-6 col-6">
+                <label>Contact No <span class="errdiv"> *</span></label>
+                <input id="txtContact" data-type="number" type="text" minlength="10" maxlength="10"
+                    class="form-control txt txtContact" placeholder="Contact No" required>
+            </div>
+            <div class="col-md-3 col-sm-6 col-6">
+                <label>Alt Contact No</label>
+                <input id="txtAltNo" type="text" class="form-control txt txtAltNo" minlength="10" maxlength="10"
+                    placeholder="Alt Contact No">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 col-sm-7">
+                <label>Address <span class="errdiv"> *</span></label>
+                <textarea id="txtAddress" class="form-control txt txtAddress" rows="3" minlength="15"
+                    placeholder="Enter Address" required></textarea>
+            </div>
+        </div>
+        <div class="row pt-2">
+            <div class="col-md-2">
+                <button type="button" class="btn btn-success" id="btnSave">Save</button>
+            </div>
+            <div class="col-md-2">
+                <button type="button" class="btn btn-secondary" id="btnClear">Clear</button>
+            </div>
+        </div>
+        <div class="row pt-3">
+            <div class="col-md-12 col-sm-12 col-12 p-2 ">
+                <table id="tblData" class="table table-bordered table-hover table-striped">
+                    <thead>
+                        <tr>
+                            <th>Sr No</th>
+                            <th> Name</th>
+                            <th>Phone</th>
+                            <th>Alt Phone</th>
+                            <th>Address</th>
+                            <th class="text-center">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
